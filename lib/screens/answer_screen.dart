@@ -174,7 +174,7 @@ class _AnswerScreenState extends State<AnswerScreen> {
           ),
           Positioned(
             top: 0.9 * screenHeight, // Replace y with the desired y-coordinate
-            left: 0.9 * screenWidth, // Replace x with the desired x-coordinate
+            left: 0.85 * screenWidth, // Replace x with the desired x-coordinate
             child: ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacement(
