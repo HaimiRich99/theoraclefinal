@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 //import 'package:simpleoracle/ads.dart';
 import 'answer_screen.dart';
 import 'start_screen.dart';
@@ -50,7 +51,9 @@ class _QuestionInputScreenState extends State<QuestionInputScreen> {
               children: [
                 SizedBox(
                   width: 0.99 * screenWidth,
-                  child: TextField(
+                  child: TextField(inputFormatters: [
+                      FilteringTextInputFormatter.deny(RegExp('\n')),
+                    ],
                     controller: _questionController,
                     onChanged: (text) => _updateCanAsk(),
                     textAlign: TextAlign.center,
